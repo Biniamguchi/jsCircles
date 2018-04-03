@@ -4,7 +4,7 @@
 </head>
 <body>
 
-	<svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+	<svg id="svg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"></svg>
 
 	<script>
 	function Circle(cx, cy, html_id)
@@ -20,17 +20,17 @@
 		this.initialize = function(){
 			//give a random velocity for the circle
 			this.info.velocity = {
-				x: randomNumberBetween(-3,3),
-				y: randomNumberBetween(-3,3)
+				x: randomNumberBetween(-5,5),
+				y: randomNumberBetween(-5,5)
 			}
 
 			//create a circle 
 			var circle = makeSVG('circle', 
 				{ 	cx: this.info.cx,
 				  	cy: this.info.cy,
-				  	r:  10,
+				  	r:  20,
 				  	id: html_id,
-				  	style: "fill: black"
+				  	style: "fill: green"
 				});
 
 			document.getElementById('svg').appendChild(circle);
